@@ -1,0 +1,2 @@
+@extends('layouts.app') @section('title','Login')
+@section('content')<div class="auth"><div class="panel"><h1>Welcome Back</h1><p class="muted">Sign in to access your library account.</p><form method="POST" action="{{ route('login.post') }}">@csrf<label>Email address</label><input type="email" name="email" value="{{ old('email') }}" required autofocus><label>Password</label><input type="password" name="password" required><div class="actions"><button class="btn">Login</button><a href="{{ route('register') }}">Create student account</a></div></form></div></div>@endsection
